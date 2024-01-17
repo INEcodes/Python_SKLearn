@@ -37,3 +37,12 @@ print(f"Accuracy: {accuracy}")
 
 # Close the connection
 connection.close()
+
+
+
+
+'''
+This is code for the project or task for the kaggle question
+Question Task: Titanic - Machine Learning from Disaster
+Question Link: https://www.kaggle.com/competitions/titanic
+'''
