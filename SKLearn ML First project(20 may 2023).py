@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 connection = msql.connect(
     host='localhost',
     user='root',
-    password='123456',
+    password='12345',
     database='titanic'
 )
 
