@@ -5,4 +5,9 @@ df.describe().plot(kind='area', fontsize=16, figsize=(15,8), table=True, colorma
 plt.xlabel('Statistics')
 plt.ylabel('Value')
 plt.title("General Statistics of Iris Dataset")
-plt.show() 
+plt.show()
+
+fig, ax = plt.subplots(figsize=(10,8))
+df['species'].value_counts().plot.pie(explode=[0.1,0.1,0.1], autopct='%1.1f%%', shadow=True, figsize=(10,8))
+plt.title("Iris Species %")
+plt.show()
