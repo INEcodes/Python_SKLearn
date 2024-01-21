@@ -12,6 +12,7 @@ connection = msql.connect(
     database='titanic'
 )
 
+
 # Read data into a Pandas DataFrame
 df = pd.read_sql('SELECT * FROM passenger_data', con=connection)
 print(df)
