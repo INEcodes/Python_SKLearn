@@ -1,6 +1,6 @@
 import pandas as pd    
 import mysql.connector as msql
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -24,7 +24,7 @@ y = df['Sex']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Create a logistic regression model
-model = LogisticRegression()
+model = RandomForestClassifier()
 
 # Train the model
 model.fit(X_train, y_train)
