@@ -12,18 +12,18 @@ connection = msql.connect(
     database='titanic'
 )
 
-
 # Read data into a Pandas DataFrame
 df = pd.read_sql('SELECT * FROM passenger_data', con=connection)
 print(df)
+
 # Prepare the data
-X = df[['Survived','Pclass']]
+X = df[['Survived', 'Pclass']]
 y = df['Sex']
 
 # Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  # Added random_state for reproducibility
 
-# Create a logistic regression model
+# Create a random forest classifier model
 model = RandomForestClassifier()
 
 # Train the model
@@ -38,12 +38,3 @@ print(f"Accuracy: {accuracy}")
 
 # Close the connection
 connection.close()
-
-
-
-
-'''
-This is code for the project or task for the kaggle question
-Question Task: Titanic - Machine Learning from Disaster
-Question Link: https://www.kaggle.com/competitions/titanic
-'''
