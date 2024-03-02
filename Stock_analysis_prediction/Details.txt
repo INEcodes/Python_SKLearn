@@ -1,0 +1,5 @@
+This is a project is done to get the stock details 
+
+Then we perform a analysis on the same 
+
+Then we use Deep Neural Networks to predict the behaviour of the stock prices.
